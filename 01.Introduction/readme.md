@@ -1,9 +1,8 @@
 #### Machine Learning - A Quick Note
 
-> Arthur Samuel described it as: 
-> "the field of study that gives computers the ability to learn without being explicitly programmed." 
+> "the field of study that gives computers the ability to learn without being explicitly programmed" by Arthur Samuel.
 
-Tom Mitchell provides a more modern definition: "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E."
+> "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E " by Tom Mitchell.
 
 - [Supervised](#supervised-learning)
 - [Unsupervised](#unsupervised-learning)
