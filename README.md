@@ -18,7 +18,7 @@ def range_of(l):
 
 # Sample list
 
-l = [1,3,5,7,7,9,10,34,22]
+l = [1,3,5,7]
 
 print 'List   :', l
 
@@ -30,3 +30,28 @@ print 'Mode   :',mode (l)
 
 print 'Range  :',range_of (l)
 ```
+
+#### Detail - Description
+---
+
+```python
+mean = (1 + 3 + 5 + 7)/4
+
+print mean
+
+
+variance = ((1-4)**2 + (3-4)**2 + (5-4)**2 +(7-5)** 2)/4
+
+print variance
+
+
+standard_deviation = variance ** (1/2) 
+
+print standard_deviation
+```
+
+#### Why standard deviation (sigma) is 34.1 % 
+
+Learn about the rule **68–95–99.7 Rule**
+
+![Rule](/data/img/rule-dev.svg)
