@@ -46,3 +46,11 @@ there is no feedback based on the prediction results.
     The **Cocktail Party Algorithm**, allows you to find structure 
     in a chaotic environment. (i.e. identifying individual voices 
     and music from a mesh of sounds at a cocktail party).
+    
+
+### Overview
+---
+
+Ref : [Microsoft cheat sheet](https://docs.microsoft.com/en-us/azure/machine-learning/studio/algorithm-cheat-sheet)
+
+![Chart](/data/img/ms-cheat.png)
