@@ -54,4 +54,4 @@ print standard_deviation
 
 Learn about the rule **68–95–99.7 Rule**
 
-![Rule](/data/img/rule-dev.svg)
+![Rule](/data/img/rule-std.png)
