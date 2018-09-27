@@ -4,6 +4,8 @@ from sklearn.linear_model import Ridge
 from sklearn.preprocessing import PolynomialFeatures
 from sklearn.pipeline import make_pipeline
 
+from sklearn import model_selection
+
 
 from sklearn import linear_model
 import matplotlib.pyplot as plt
@@ -17,14 +19,20 @@ y = boston.target
 # cross_val_predict returns an array of the same size as `y` where each entry
 # is a prediction obtained by cross validation:
 
-predicted = cross_val_predict(lr, boston.data, y, cv=10)
+models = [('linear',lr), ('poly',logr)]
 
-polpredicted = cross_val_predict(logr, boston.data, y, cv = 10)
 
-pred = [('linear',predicted), ('poly',polpredicted)]
 
-plt.plot(y, label='actual', color='g')
-plt.plot(predicted, label='linear predicted', color='r')
-plt.plot(polpredicted, label='linear predicted', color='orange')
+X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(boston.data, y, test_size=0.2, random_state=1)
 
-plt.show()
+for name, model in models:
+
+    predicted = cross_val_predict(model, boston.data, y, cv=10)
+
+    plt.plot(y, label='actual', color='g')
+    plt.plot(predicted, label='linear predicted', color='r')
+    plt.title(name)
+    plt.show()
+
+    model.fit(X_train, Y_train)
+    print 'Model Name : ', name, '   accuracy : ', model.score(X_validation, Y_validation)
