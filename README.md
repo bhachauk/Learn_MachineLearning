@@ -93,7 +93,7 @@ Y = np.random.binomial(1, theta, nobs)
 </p>
 <p align="center">
 <kbd>
-<img src="/data/img/bernoulli.png" width="400" height="400"/></kbd> 
+<img src="/data/img/bernoulli.png" width="500" height="500"/></kbd> 
 </p>
 
 See Full code to plot [here](/01.Introduction/distributions/bernoulli.py)
@@ -146,5 +146,5 @@ y axis = Number of Success have
 </p>
 <p align="center">
 <kbd>
-<img src="/data/img/binomial.png" width="400" height="400"/></kbd> 
+<img src="/data/img/binomial.png" width="500" height="500"/></kbd> 
 </p>
