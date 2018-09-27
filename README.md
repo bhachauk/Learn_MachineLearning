@@ -57,10 +57,9 @@ Learn about the rule **68–95–99.7 Rule**
 
 <p align="center">
 Normal Distribution
-
-![Rule](/data/img/rule-std.png)
-{: kbd} 
 </p>
+
+![Rule](/data/img/rule-std.png) {style="display: block; margin: 0 auto"}
 
 
 
