@@ -17,6 +17,8 @@ from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
 
+import seaborn as sns
+
 
 
 # Load dataset
@@ -73,6 +75,18 @@ names = []
 for name, model in models:
 	kfold = model_selection.KFold(n_splits=10, random_state=seed)
 	cv_results = model_selection.cross_val_score(model, X_train, Y_train, cv=kfold, scoring=scoring)
+
+	predicted = model_selection.cross_val_predict(model, X_train, Y_train)
+	cm= confusion_matrix(Y_train, predicted)
+	ax = plt.subplot()
+	sns.heatmap(cm, annot=True, ax=ax);  # annot=True to annotate cells
+
+	# labels, title and ticks
+	ax.set_xlabel('Predicted labels');
+	ax.set_ylabel('True labels');
+	ax.set_title('Confusion Matrix');
+	plt.show()
+
 	results.append(cv_results)
 	names.append(name)
 	msg = "%s: %f (%f)" % (name, cv_results.mean(), cv_results.std())
