@@ -57,6 +57,8 @@ Learn about the rule **68–95–99.7 Rule**
 
 <p align="center">
 <i>Normal Distribution</i>
+</p>
+<p align="center">
 <kbd>
 <img src="/data/img/rule-std.png"/></kbd> 
 </p>
