@@ -64,6 +64,7 @@ Learn about the rule **68–95–99.7 Rule**
 </p>
 
 ### Distributions
+---
 
 - [Bernoulli Distribution](#bernoulli-distribution)
 - [Uniform Distribution](#uniform-distribution)
@@ -73,6 +74,7 @@ Learn about the rule **68–95–99.7 Rule**
 - Exponential Distribution
 
 #### Bernoulli Distribution
+---
 
 x axis = Success Or Failure
 
@@ -91,29 +93,29 @@ Y = np.random.binomial(1, theta, nobs)
 </p>
 <p align="center">
 <kbd>
-<img src="/data/img/bernoulli.png"/></kbd> 
+<img src="/data/img/bernoulli.png" width="400" height="400"/></kbd> 
 </p>
 
 See Full code to plot [here](/01.Introduction/distributions/bernoulli.py)
 
 #### Uniform Distribution
+---
 
 It can be called **Rectangular Distribution** or **Continous Distribution**.
 
 
 #### Binomial Distribution
+---
 
 x axis = Possible Results
 
 y axis = Number of Success have
 
-*Example*
+**Example 2 Trials with Dice :**
 
-2 Trials with Dice:
+*Possible Results = 11*
 
-Possible Results = 11
-
-Total Number Of occurances (S) = 36 
+*Total Number Of occurances (S) = 36* 
 
 ```
 2{(1,1)}  => 1/36
@@ -144,5 +146,5 @@ Total Number Of occurances (S) = 36
 </p>
 <p align="center">
 <kbd>
-<img src="/data/img/binomial.png"/></kbd> 
+<img src="/data/img/binomial.png" width="400" height="400"/></kbd> 
 </p>
