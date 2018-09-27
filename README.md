@@ -56,8 +56,9 @@ print standard_deviation
 Learn about the rule **68–95–99.7 Rule**
 
 <p align="center">
-Normal Distribution
-<img src="/data/img/rule-std.png"/> 
+<i>Normal Distribution</i>
+<kbd>
+<img src="/data/img/rule-std.png"/></kbd> 
 </p>
 
 
