@@ -34,5 +34,12 @@ for name, model in models:
     plt.title(name)
     plt.show()
 
+    fig, ax = plt.subplots()
+    ax.scatter(y, predicted, edgecolors=(0, 0, 0))
+    ax.plot([y.min(), y.max()], [y.min(), y.max()], 'k--', lw=4)
+    ax.set_xlabel('Measured')
+    ax.set_ylabel('Predicted')
+    plt.show()
+
     model.fit(X_train, Y_train)
     print 'Model Name : ', name, '   accuracy : ', model.score(X_validation, Y_validation)

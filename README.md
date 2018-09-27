@@ -1,7 +1,8 @@
 # Learn_MachineLearning
 Started from scratch stay tuned ....
 
-### Basic Parameters
+## Basic Parameters
+---
 
 #### Mean, Median, Mode and Range
 
@@ -54,4 +55,15 @@ print standard_deviation
 
 Learn about the rule **68–95–99.7 Rule**
 
+Normal Distribution {style=text-align:center}
+
 ![Rule](/data/img/rule-std.png)
+
+### Distributions
+
+- Bernoulli Distribution
+- Uniform Distribution
+- Binomial Distribution
+- Normal Distribution
+- Poisson Distribution
+- Exponential Distribution
