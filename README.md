@@ -57,9 +57,9 @@ Learn about the rule **68–95–99.7 Rule**
 
 <p align="center">
 Normal Distribution
+<img src="/data/img/rule-std.png"/> 
 </p>
 
-![Rule](/data/img/rule-std.png) {style="display: block; margin: 0 auto"}
 
 
 
