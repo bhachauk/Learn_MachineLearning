@@ -61,6 +61,8 @@ rat  0      1       2
 ```
 
 
-This is the confusion matrix.
+This is the confusion matrix. View this in Python Code
+
+![confusionmat](/02.Classification/confusionmatrix.ipynb)
 
 
