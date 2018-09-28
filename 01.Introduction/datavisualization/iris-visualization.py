@@ -31,6 +31,8 @@ iris.plot(kind="scatter", x="petal-length", y="petal-width")
 
 plt.show()
 
+sns.violinplot(x="class", y="petal-length", data=iris, size=6)
+
 diagkinds = ['auto', 'hist', 'kde']
 
 for dk in diagkinds:
