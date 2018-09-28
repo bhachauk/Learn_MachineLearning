@@ -103,6 +103,14 @@ See Full code to plot [here](/01.Introduction/distributions/bernoulli.py)
 
 It can be called **Rectangular Distribution** or **Continous Distribution**.
 
+***Example:***
+
+*[Source](https://math.stackexchange.com/questions/1412305/real-world-examples-of-continuous-uniform-distribution-on-0-1)*
+
+You show up at a bus stop to wait for a bus that comes by once per hour. 
+You do not know what time the bus came by last. 
+The arrival time of the next bus is a continuous uniform distribution [0,1] measured in hours.
+
 
 #### Binomial Distribution
 ---

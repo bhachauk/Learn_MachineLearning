@@ -1,6 +1,5 @@
 # Linear Regression with Iris Data set:
 # Ref : https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
-
 import pandas
 import numpy as np
 from pandas import Series
