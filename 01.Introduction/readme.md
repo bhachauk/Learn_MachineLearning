@@ -156,3 +156,8 @@ y axis = Number of Success have
 <kbd>
 <img src="/data/img/binomial.png" width="500" height="500"/></kbd> 
 </p>
+
+
+Sources
+
+- [https://www.kaggle.com/benhamner/python-data-visualizations](https://www.kaggle.com/benhamner/python-data-visualizations)

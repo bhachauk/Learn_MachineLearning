@@ -42,3 +42,25 @@ for dk in diagkinds:
 
 radviz(iris, "class")
 plt.show()
+
+## Normal Histogram Plot
+
+iris.hist()
+plt.show()
+
+# Correlation Matrix Plot
+
+correlations = iris.corr()
+# plot correlation matrix
+fig = plt.figure()
+ax = fig.add_subplot(111)
+cax = ax.matshow(correlations, vmin=-1, vmax=1)
+fig.colorbar(cax)
+ax.set_xticklabels(names)
+ax.set_yticklabels(names)
+plt.show()
+
+for n in names:
+    if n != 'class':
+        sns.violinplot(x="class", y=n, data=iris, size=6)
+        plt.show()
