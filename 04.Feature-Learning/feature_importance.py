@@ -83,4 +83,4 @@ for clf in clfs:
 result = result.set_index('feature', drop=True)
 
 print result
-# TODO Get summary for betst feature by mean of attributes
+# TODO Get summary for best feature using by mean of all attributes
