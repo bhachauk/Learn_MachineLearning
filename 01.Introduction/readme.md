@@ -1,56 +1,158 @@
-#### Machine Learning - A Quick Note
+# Learn_MachineLearning
+Started from scratch stay tuned ....
 
-> "the field of study that gives computers the ability to learn without being explicitly programmed" by Arthur Samuel.
-
-> "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E " by Tom Mitchell.
-
-- [Supervised](#supervised-learning)
-- [Unsupervised](#unsupervised-learning)
-
-##### Supervised Learning
-
-> With Data Sets or Observations
-
-###### Types
-
-- Classification
-    In a classification problem, we are instead trying to predict 
-    results in a discrete output. In other words, 
-    we are trying to map input variables into discrete categories.
-    
-    **ex :** Given a patient with a tumor, we have to predict whether the tumor is malignant or benign. 
-    
-- Regression
-    In a regression problem, we are trying to predict results within 
-    a continuous output, meaning that 
-    we are trying to map input variables to some continuous function.
-    
-    **ex :**  Given a picture of a person, we have to predict their age on the basis of the given picture.
-
-##### Unsupervised Learning
-
-> Without Data Sets or Observations
-
-We don't have any idea what our results should look like and 
-there is no feedback based on the prediction results.
-
-###### Types
-
-- **Clustering**
-    Take a collection of 1,000,000 different genes, and find 
-    a way to automatically group these genes into groups that 
-    are somehow similar or related by different variables, 
-    such as lifespan, location, roles, and so on.
-    
-- **Non-Clustering**
-    The **Cocktail Party Algorithm**, allows you to find structure 
-    in a chaotic environment. (i.e. identifying individual voices 
-    and music from a mesh of sounds at a cocktail party).
-    
-
-### Overview
+## Basic Parameters
 ---
 
-Ref : [Microsoft cheat sheet](https://docs.microsoft.com/en-us/azure/machine-learning/studio/algorithm-cheat-sheet)
+#### Mean, Median, Mode and Range
 
-![Chart](/data/img/ms-cheat.png)
+```python
+import numpy as np
+
+def mode(l):
+
+	return max(set(l), key=l.count)
+
+def range_of(l):
+
+	return max(l)-min(l)
+
+# Sample list
+
+l = [1,3,5,7]
+
+print 'List   :', l
+
+print 'Mean   :',np.mean(l)
+
+print 'Median :',np.median(l)
+
+print 'Mode   :',mode (l)
+
+print 'Range  :',range_of (l)
+```
+
+#### Detail - Description
+---
+
+```python
+mean = (1 + 3 + 5 + 7)/4
+
+print mean
+
+
+variance = ((1-4)**2 + (3-4)**2 + (5-4)**2 +(7-5)** 2)/4
+
+print variance
+
+
+standard_deviation = variance ** (1/2) 
+
+print standard_deviation
+```
+
+#### Why standard deviation (sigma) is 34.1 % 
+
+Learn about the rule **68–95–99.7 Rule**
+
+<p align="center">
+<i>Normal Distribution</i>
+</p>
+<p align="center">
+<kbd>
+<img src="/data/img/rule-std.png"/></kbd> 
+</p>
+
+### Distributions
+---
+
+- [Bernoulli Distribution](#bernoulli-distribution)
+- [Uniform Distribution](#uniform-distribution)
+- [Binomial Distribution](#binomial-distribution)
+- Normal Distribution
+- Poisson Distribution
+- Exponential Distribution
+
+#### Bernoulli Distribution
+---
+
+x axis = Success Or Failure
+
+y axis = Frequency (Number of Trials)
+
+*Sample Code*
+```python
+import numpy as np
+theta = 0.7
+nobs = 10
+Y = np.random.binomial(1, theta, nobs)
+```
+
+<p align="center">
+<i>Bernoulli Distribution</i>
+</p>
+<p align="center">
+<kbd>
+<img src="/data/img/bernoulli.png" width="500" height="500"/></kbd> 
+</p>
+
+See Full code to plot [here](/01.Introduction/distributions/bernoulli.py)
+
+#### Uniform Distribution
+---
+
+It can be called **Rectangular Distribution** or **Continous Distribution**.
+
+***Example:***
+
+*[Source](https://math.stackexchange.com/questions/1412305/real-world-examples-of-continuous-uniform-distribution-on-0-1)*
+
+You show up at a bus stop to wait for a bus that comes by once per hour. 
+You do not know what time the bus came by last. 
+The arrival time of the next bus is a continuous uniform distribution [0,1] measured in hours.
+
+
+#### Binomial Distribution
+---
+
+x axis = Possible Results
+
+y axis = Number of Success have
+
+**Example 2 Trials with Dice :**
+
+*Possible Results = 11*
+
+*Total Number Of occurances (S) = 36* 
+
+```
+2{(1,1)}  => 1/36
+
+3{(1,2),(2,1)} => 2/36
+
+4{(2,2),(3,1),(1,3)} => 3/36
+
+5{(1,4),(4,1),(2,3),(3,2)} => 4/36
+
+6{(3,3),(1,5),(5,1),(2,4),(4,2)} => 5/36
+
+7{(1,6),(6,1),(2,5),(5,2),(3,4),(4,3)} => 6/36
+
+8{(2,6),(6,2),(3,5),(5,3),(4,4)} => 5/36
+
+9{(3,6),(6,3),(5,4),(4,5)} => 4/36
+
+10{(4,6),(6,4),(5,5)} => 3/36
+
+11{(5,6),(6,5)} => 2/36
+
+12{(6,6)} = > 1/36
+```
+
+<p align="center">
+<i>Binomial Distribution</i>
+</p>
+<p align="center">
+<kbd>
+<img src="/data/img/binomial.png" width="500" height="500"/></kbd> 
+</p>
