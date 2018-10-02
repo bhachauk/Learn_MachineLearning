@@ -1,0 +1,1 @@
+- [visualizing nominal set](http://adataanalyst.com/data-analysis-resources/visualise-categorical-variables-in-python/)
