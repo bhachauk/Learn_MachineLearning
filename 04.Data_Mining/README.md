@@ -11,7 +11,11 @@
 
 - [http://tdan.com/data-mining-and-statistics-what-is-the-connection/5226#](http://tdan.com/data-mining-and-statistics-what-is-the-connection/5226#)
 - [https://www.linkedin.com/pulse/3-styles-data-mining-abhishek-mittal/](https://www.linkedin.com/pulse/3-styles-data-mining-abhishek-mittal/)
+
 - [Ipl Data - paper](http://www.ijmlc.org/papers/143-C00120-003.pdf)
+- [Machine Learning On Feature Extracttion - paper](https://arxiv.org/pdf/1711.10933.pdf)
+
+
 - [Data Mining for Fun and Profit](https://www.jstor.org/stable/2676725?seq=1#page_scan_tab_contents)
 - [Discussion On Correlation](https://www.researchgate.net/post/Correlation_between_discrete_and_categorical_data)
 
@@ -20,3 +24,16 @@
 - [Correlation on Signals](https://www.allaboutcircuits.com/technical-articles/understanding-correlation/)
 - [Correlation Types](http://www.statisticssolutions.com/correlation-pearson-kendall-spearman/)
 - [Feature Performance](https://www.kaggle.com/grfiv4/plotting-feature-importances)
+- [Feature importance on Titanic for Chi 2](http://www.handsonmachinelearning.com/blog/2AeuRL/chi-square-feature-selection-in-python)
+
+- [Data Types](https://statistics.laerd.com/statistical-guides/types-of-variable.php)
+- [concordant and discordant](https://www.statisticshowto.datasciencecentral.com/concordant-pairs-discordant-pairs/)
+
+###### Association Rule Mining
+
+- [Example 1](http://pbpython.com/market-basket-analysis.html)
+- [Example 2](https://stackabuse.com/association-rule-mining-via-apriori-algorithm-in-python/)
+- [Example 3](https://www.analyticsvidhya.com/blog/2017/08/mining-frequent-items-using-apriori-algorithm/)
+- [Example 4](https://rasbt.github.io/mlxtend/user_guide/frequent_patterns/apriori/)
+- [Efficient - Apriori - Python 3.6](https://pypi.org/project/efficient-apriori/)
+- [Example 5 With Plots](http://intelligentonlinetools.com/blog/tag/apriori-algorithm-in-data-mining/)
