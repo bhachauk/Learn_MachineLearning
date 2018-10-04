@@ -37,7 +37,7 @@ diagkinds = ['auto', 'hist', 'kde']
 
 for dk in diagkinds:
 
-    sns.pairplot(iris, hue="class", height=3, diag_kind=dk)
+    sns.pairplot(iris, hue="class", size=3, diag_kind=dk)
     plt.show()
 
 radviz(iris, "class")

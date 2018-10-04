@@ -13,7 +13,7 @@
 - [https://www.linkedin.com/pulse/3-styles-data-mining-abhishek-mittal/](https://www.linkedin.com/pulse/3-styles-data-mining-abhishek-mittal/)
 
 - [Ipl Data - paper](http://www.ijmlc.org/papers/143-C00120-003.pdf)
-- [Machine Learning On Feature Extracttion - paper](https://arxiv.org/pdf/1711.10933.pdf)
+- [Machine Learning On Feature Extraction - paper](https://arxiv.org/pdf/1711.10933.pdf)
 
 
 - [Data Mining for Fun and Profit](https://www.jstor.org/stable/2676725?seq=1#page_scan_tab_contents)
