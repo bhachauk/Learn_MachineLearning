@@ -11,7 +11,8 @@ import seaborn as sns
 
 titanic = pd.read_csv('/home/bhanuchander/course/Learn_MachineLearning/data/csv/titanic/train.csv')
 
-nominal_cols = ['Embarked','Pclass','Age', 'Survived']
+
+nominal_cols = ['Embarked','Pclass','Age', 'Survived', 'Sex']
 
 in_titanic= titanic[nominal_cols]
 
@@ -67,7 +68,7 @@ output = apriori(df, min_support=0.2, use_colnames=oht.columns_)
 
 print output.head()
 
-for x in ['Embarked', 'Pclass','Age']:
+for x in ['Embarked', 'Pclass','Age', 'Sex']:
     sns.set(style="whitegrid")
     ax = sns.countplot(y=x, hue="Survived", data=in_titanic)
     plt.ylabel(x)
@@ -78,7 +79,8 @@ config = [
     ('antecedent support', 0.7),
     ('support', 0.5),
     ('support', 0.3),
-    ('confident', 0.5)
+    ('confidence', 0.5),
+    ('conviction', 10)
 ]
 
 for metric_type, th in config:
