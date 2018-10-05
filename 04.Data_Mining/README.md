@@ -29,7 +29,7 @@
 - [Data Types](https://statistics.laerd.com/statistical-guides/types-of-variable.php)
 - [concordant and discordant](https://www.statisticshowto.datasciencecentral.com/concordant-pairs-discordant-pairs/)
 
-###### Association Rule Mining
+#### Association Rule Mining
 
 *Apriori Algorithm*
 
@@ -44,3 +44,7 @@
 
 - [Example 1](https://www.spss-tutorials.com/chi-square-independence-test/)
 - [Example 2](http://statisticsbyjim.com/hypothesis-testing/chi-square-test-independence-example/)
+
+#### Feature Learning
+ 
+- [Feature Learning With Chi 2](https://www.linkedin.com/pulse/chi-square-feature-selection-python-md-badiuzzaman-biplob/)
