@@ -31,9 +31,16 @@
 
 ###### Association Rule Mining
 
+*Apriori Algorithm*
+
 - [Example 1](http://pbpython.com/market-basket-analysis.html)
 - [Example 2](https://stackabuse.com/association-rule-mining-via-apriori-algorithm-in-python/)
 - [Example 3](https://www.analyticsvidhya.com/blog/2017/08/mining-frequent-items-using-apriori-algorithm/)
 - [Example 4](https://rasbt.github.io/mlxtend/user_guide/frequent_patterns/apriori/)
 - [Efficient - Apriori - Python 3.6](https://pypi.org/project/efficient-apriori/)
 - [Example 5 With Plots](http://intelligentonlinetools.com/blog/tag/apriori-algorithm-in-data-mining/)
+
+*Chi2*
+
+- [Example 1](https://www.spss-tutorials.com/chi-square-independence-test/)
+- [Example 2](http://statisticsbyjim.com/hypothesis-testing/chi-square-test-independence-example/)
