@@ -76,11 +76,11 @@ for x in ['Embarked', 'Pclass','Age', 'Sex']:
     plt.show()
 
 config = [
-    ('antecedent support', 0.7),
-    ('support', 0.5),
-    ('support', 0.3),
-    ('confidence', 0.5),
-    ('conviction', 10)
+    ('antecedent support', 0.7)
+    # ('support', 0.5),
+    # ('support', 0.3),
+    # ('confidence', 0.5),
+    # ('conviction', 10)
 ]
 
 for metric_type, th in config:
@@ -99,3 +99,9 @@ for metric_type, th in config:
     plt.ylabel('confidence')
     plt.title(metric_type+' : '+str(th))
     plt.show()
+
+    rules = rules[(rules['antecedents'])]
+    rules = rules[rules['antecedents']]
+
+    print rules.head()
+
