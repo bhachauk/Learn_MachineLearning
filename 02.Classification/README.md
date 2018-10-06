@@ -1,3 +1,12 @@
+## Classification
+---
+
+### Contents
+
+- [Confusion matrix](#what-is-confusion-matrix)
+- [IRIS Data Classification](/02.Classification/classification.ipynb)
+
+
 #### What is Confusion Matrix
 
 It is the summary metric of classification model. It defines about confusion level

@@ -1,5 +1,11 @@
-# Package Contents
+# Contents Of Basics
 ---
+
+<p align="center">
+<i>Learn First Do Next</i>
+</p>
+
+Here I have organized most of the basics in chapter wise. I hope it will help you to explore fast. 
 
 - [01. Introduction](01.Introduction/readme.md)
 - [02. Classification](02.Classification/README.md)

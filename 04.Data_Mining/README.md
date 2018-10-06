@@ -29,6 +29,9 @@
 - [Data Types](https://statistics.laerd.com/statistical-guides/types-of-variable.php)
 - [concordant and discordant](https://www.statisticshowto.datasciencecentral.com/concordant-pairs-discordant-pairs/)
 
+- [visualizing nominal set](http://adataanalyst.com/data-analysis-resources/visualise-categorical-variables-in-python/)
+- [chi 2 on multiple categorical values](https://stackoverflow.com/questions/48035381/correlation-among-multiple-categorical-variables-pandas)
+
 #### Association Rule Mining
 
 *Apriori Algorithm*

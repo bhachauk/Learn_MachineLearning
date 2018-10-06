@@ -1,8 +1,16 @@
 # Introduction
+---
 
 We need to know all statistical parameters before starting to do Machine Learning.
 
-Here I added some basic parameters which i met often. 
+Here I added some basic parameters which i met often. These are all used to understand the
+data you have.
+
+- [Basic parameters](#-basic-parameters)
+- [Distributions](#-distributions)
+- [DataVisualization](#data-visualization)
+
+
 
 ## Basic Parameters
 ---
@@ -172,6 +180,11 @@ y axis = Number of Success have
 Sources
 
 - [https://www.kaggle.com/benhamner/python-data-visualizations](https://www.kaggle.com/benhamner/python-data-visualizations)
+
+### Data Visualization
+
+- [IRIS Data](/01.Introduction/datavisualization/iris-visualization.ipynb)
+- [TITANIC Data](/01.Introduction/datavisualization/Nominal_Visualization_Titanic.ipynb)
 
 
 **[BACK](/README.md)**
