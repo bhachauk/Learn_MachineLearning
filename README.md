@@ -1,3 +1,12 @@
+# Package Contents
+---
+
+- [01. Introduction](01.Introduction/readme.md)
+- [02. Classification](02.Classification/README.md)
+- [03. Regression](03.Regression/readme.md)
+- [04. DataMining](04.Data_Mining/README.md)
+
+
 # Machine Learning - A Quick Note
 ---
 
@@ -148,13 +157,3 @@ Ref : [Microsoft cheat sheet](https://docs.microsoft.com/en-us/azure/machine-lea
 - Sequence to Sequence Prediction.
 
 [Source](https://machinelearningmastery.com/sequence-prediction)
-
-
-# Contents
----
-
-- [01. Introduction](01.Introduction/readme.md)
-- [02. Classification](02.Classification/README.md)
-- [03. Regression](03.Regression/readme.md)
-- [04. DataMining](04.Data_Mining/README.md)
-
