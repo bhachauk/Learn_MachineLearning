@@ -100,8 +100,3 @@ for metric_type, th in config:
     plt.title(metric_type+' : '+str(th))
     plt.show()
 
-    rules = rules[(rules['antecedents'])]
-    rules = rules[rules['antecedents']]
-
-    print rules.head()
-
