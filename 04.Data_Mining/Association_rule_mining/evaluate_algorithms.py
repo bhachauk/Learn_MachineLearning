@@ -63,6 +63,9 @@ alarm1 = alarm1[names]
 
 alarm1.fillna('Unknown', inplace=True)
 
+import os
+import psutil
+current_process = psutil.Process(os.getpid())
 
 #Data Org Finished
 for in_titanic in [in_titanic, alarm, alarm1]:
@@ -85,16 +88,20 @@ for in_titanic in [in_titanic, alarm, alarm1]:
 
     output = apriori(df, min_support=0.2, use_colnames=oht.columns_)
     rules = association_rules(output, metric='confidence', min_threshold=0.1)
+    a_mem = current_process.memory_percent()
     ap_time = (time.time() - start_time_ap)
 
     start_time = time.time()
     patterns = pyfpgrowth.find_frequent_patterns(in_titanic.values, 0.1)
     rules = pyfpgrowth.generate_association_rules(patterns, 0.1)
+    fp_mem = current_process.memory_percent()
     fptime= (time.time() - start_time)
 
 
     print 'For Data Matrix          : ', r, ' x ', c
     print 'Number of Individuals    : ', df.shape[1]
-    print 'Apriori                  : ', ap_time
-    print 'FP-Algorithm             : ', fptime
+    print 'Apriori Exe Time         : ', ap_time
+    print '         Memory Usage    : ', a_mem
+    print 'FP-Algorithm Exe Time    : ', fptime
+    print '         Memory Usage    : ', fp_mem
     print '--------------------------'
