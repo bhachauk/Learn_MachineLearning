@@ -1,10 +1,11 @@
-### Machine Learning - A Quick Note
+# Machine Learning - A Quick Note
+---
 
 > "the field of study that gives computers the ability to learn without being explicitly programmed" by Arthur Samuel.
 
 > "A computer program is said to learn from experience E with respect to some class of tasks T and performance measure P, if its performance at tasks in T, as measured by P, improves with experience E " by Tom Mitchell.
 
----
+Types:
 
 - [Supervised](#supervised-learning)
 - [Unsupervised](#unsupervised-learning)
@@ -12,15 +13,15 @@
 
 ---
 
-### Supervised Learning
+## Supervised Learning
 
-> **With Data Sets or Observations**
+*With Data Sets or Observations*
 
-#### Types
+Types:
 
-- Classification
-- Regression
-- Ensembling 
+- [Classification](#-classification)
+- [Regression](#-regression)
+- [Ensembling](#)
 
 > *Algorithms :* 
 > Linear Regression, Logistic Regression, CART, Naive Bayes, KNN
@@ -45,7 +46,17 @@ Ex:
 - Given a picture of a person, we have to predict their age on the basis of the given picture.
 - Finding the flat price by space.
 
-### Unsupervised Learning
+#### Ensembling
+---
+
+It is a type of supervised learning. It means combining the predictions of multiple different weak ML models to predict on a new sample. 
+
+Ex:
+
+Bagging with Random Forests, Boosting with XGBoost are examples of ensemble techniques.
+
+
+## Unsupervised Learning
 ---
 
 > Without Data Sets or Observations
@@ -53,16 +64,16 @@ Ex:
 We don't have any idea what our results should look like and 
 there is no feedback based on the prediction results.
 
-#### Types
----
+Types:
 
-- Clustering.
-- Non-Clustering.
-- Association.
-- Dimensionality Reduction.
+- [Clustering](#-clustering)
+- [Non-Clustering](#-non-clustering)
+- [Association](#-association)
+- [Dimensionality Reduction](#-dimensionality-reduction)
 
-> *Algorithms:*
-> Apriori, K-means, PCA
+Algorithms :
+
+*Apriori, K-means, PCA*
 
 
 #### Clustering
@@ -105,10 +116,10 @@ Example:
 - PCA algorithm (Principal Component Analysis) is a Feature Extraction approach.
 
     
-### Reinforcement learning
+## Reinforcement learning
 ---
  
-> **Not supervised nor unsupervised**
+ *Not supervised nor unsupervised*
 
 Reinforcement learning is a type of machine learning algorithm that allows the agent to decide the best next action based on its current state, 
 by learning behaviours that will maximize the reward. Reinforcement algorithms usually learn optimal actions through trial and error. 
@@ -137,3 +148,13 @@ Ref : [Microsoft cheat sheet](https://docs.microsoft.com/en-us/azure/machine-lea
 - Sequence to Sequence Prediction.
 
 [Source](https://machinelearningmastery.com/sequence-prediction)
+
+
+# Contents
+---
+
+- [01. Introduction](01.Introduction/readme.md)
+- [02. Classification](02.Classification/README.md)
+- [03. Regression](03.Regression/readme.md)
+- [04. DataMining](04.Data_Mining/README.md)
+
