@@ -1,9 +1,14 @@
-##### Normal Equation:
+## Questions and Answers On Machine Learning Concepts: 
 
+
+###### What are some differences between using Normal Equation Method and Gradient Descent method ?
+---
+
+**Normal Equation :**
+ 
 ```equation
 θ =(XT X)^ −1 XT y
 ```
-
 
 - For larger sets , It will turn big matrix and needs more processing time. Choosing gradient descend method is good for larger data sets.
 
