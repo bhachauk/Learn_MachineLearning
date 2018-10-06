@@ -1,10 +1,16 @@
-# Learn_MachineLearning
-Started from scratch stay tuned ....
+# Introduction
+
+We need to know all statistical parameters before starting to do Machine Learning.
+
+Here I added some basic parameters which i met often. 
 
 ## Basic Parameters
 ---
 
 #### Mean, Median, Mode and Range
+---
+
+Programming Language `python 2.7` used to explain the parameters.
 
 ```python
 import numpy as np
@@ -32,10 +38,11 @@ print 'Mode   :',mode (l)
 print 'Range  :',range_of (l)
 ```
 
-#### Detail - Description
+#### Description in Python
 ---
 
 ```python
+
 mean = (1 + 3 + 5 + 7)/4
 
 print mean
@@ -49,9 +56,11 @@ print variance
 standard_deviation = variance ** (1/2) 
 
 print standard_deviation
+
 ```
 
 #### Why standard deviation (sigma) is 34.1 % 
+---
 
 Learn about the rule **68–95–99.7 Rule**
 
@@ -82,10 +91,12 @@ y axis = Frequency (Number of Trials)
 
 *Sample Code*
 ```python
+
 import numpy as np
 theta = 0.7
 nobs = 10
 Y = np.random.binomial(1, theta, nobs)
+
 ```
 
 <p align="center">
@@ -107,9 +118,9 @@ It can be called **Rectangular Distribution** or **Continous Distribution**.
 
 *[Source](https://math.stackexchange.com/questions/1412305/real-world-examples-of-continuous-uniform-distribution-on-0-1)*
 
-You show up at a bus stop to wait for a bus that comes by once per hour. 
-You do not know what time the bus came by last. 
-The arrival time of the next bus is a continuous uniform distribution [0,1] measured in hours.
+> You show up at a bus stop to wait for a bus that comes by once per hour. 
+  You do not know what time the bus came by last. 
+  The arrival time of the next bus is a continuous uniform distribution [0,1] measured in hours.
 
 
 #### Binomial Distribution
