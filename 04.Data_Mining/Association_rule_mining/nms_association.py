@@ -6,16 +6,33 @@ from mlxtend.frequent_patterns import apriori, association_rules
 
 alarm = pd.read_csv('/home/bhanuchander/alarm.csv')
 
-names = ['OBJECTTYPE', 'LAYERRATE', 'PROBABLECAUSEQUALIFIER', 'NATIVEPROBABLECAUSE', 'SEVERITY']
+## Data Organizing
+
+names = ['OBJECTTYPE', 'LAYERRATE', 'NATIVEPROBABLECAUSE', 'SEVERITY']
 
 alarm = alarm[names]
 
-alarm.fillna('Unknown', inplace=True)
+# datadict = pd.DataFrame(alarm.dtypes)
+#
+# datadict['MissingVal'] = alarm.isnull().sum()
+#
+# print datadict
 
-print alarm.info()
+for n in alarm.columns[alarm.isna().any()].tolist():
 
-print alarm.shape[1]
+    unkwn = 'UNKNOWN_' + n
 
+    alarm[n].fillna(unkwn, inplace=True)
+
+    print '---------------------'
+
+    print 'Updated Column Name : ', n
+
+    print alarm[n].value_counts()
+
+    print '\n-------------------'
+
+# For Bigger Data
 records = []
 for i in range(0, alarm.shape[0]-1):
     records.append([str(alarm.values[i,j]) for j in range(0, alarm.shape[1])])
@@ -28,19 +45,10 @@ df = pd.DataFrame(oht_ary, columns=oht.columns_)
 
 
 
-association_rules = apriori(df, min_support=0.3)
-
-
-print association_rules
-
-
-
-#
-# frequent_itemsets = apriori(df, min_support=0.6, use_colnames=True)
-# print (frequent_itemsets)
+frequent_itemsets = apriori(df, min_support=0.6, use_colnames=True)
+print (frequent_itemsets)
 
 #-----------------------------------
 
-# association_rules(frequent_itemsets, metric="confidence", min_threshold=0.7)
-# rules = association_rules(frequent_itemsets, metric="lift", min_threshold=1.2)
-# print (rules)
+rules = association_rules(frequent_itemsets, metric= "confidence", min_threshold=0.7)
+print (rules)

@@ -21,7 +21,17 @@ alarm['TIME'] = pd.to_datetime(alarm['TIME'], unit='ms')
 
 alarm['DAY'] = alarm['TIME'].dt.weekday_name
 
-names = ['OBJECTTYPE', 'PROBABLECAUSE', 'SEVERITY', 'DAY']
+alarm['HOUR'] = alarm['TIME'].dt.hour
+
+# alarm.ix[alarm['HOUR'] <= 13, 'HOUR'] = 'FORE_NOON'
+# alarm.ix[alarm['HOUR'] > 13, 'HOUR'] = 'AFTER_NOON'
+alarm['HOUR'][(alarm['HOUR'] >= 4) & (alarm['HOUR'] > 18)]= 'NIGHT'
+alarm['HOUR'][(alarm['HOUR'] >= 13) & (alarm['HOUR'] < 18)]= 'AN'
+alarm['HOUR'][alarm['HOUR'] < 13 ]= 'FN'
+
+print alarm['HOUR'].value_counts()
+
+names = ['OBJECTTYPE', 'PROBABLECAUSE', 'SEVERITY', 'DAY', 'HOUR']
 
 alarm = alarm[names]
 
@@ -29,13 +39,21 @@ print 'Observations : ', alarm.shape[0]
 
 print 'Columns      : ', alarm.shape[1]
 
+print alarm.head()
+
+
+for n in names:
+    alarm[n].value_counts().plot(kind="bar")
+    plt.title(n)
+    plt.show()
+
 # Always Fill na 'Unknown' for Nominal Data Set
 
 # alarm['LAYERRATE'].fillna('LR_Unknown', inplace=True)
 
-for n in names:
-
-    print alarm[n].value_counts()
+# for n in names:
+#
+#     print alarm[n].value_counts()
 
 
 
@@ -47,20 +65,18 @@ for i in range(0, alarm.shape[0]-1):
 oht = TransactionEncoder()
 oht_ary = oht.fit(dataset).transform(dataset)
 df = pd.DataFrame(oht_ary, columns=oht.columns_)
-print df.head()
-
-print oht.columns_
 
 output = apriori(df, min_support=0.1, use_colnames=oht.columns_)
+
+output.sort_values(by=['support'])
 
 print output
 
 config = [
-    ('antecedent support', 0.7),
+    ('antecedent support', 0.3),
     ('support', 0.3),
-    # ('support', 0.3),
-    ('confidence', 0.95),
-    # ('conviction', 10)
+    ('confidence', 0.5),
+    ('conviction', 10)
 ]
 
 for metric_type, th in config:
