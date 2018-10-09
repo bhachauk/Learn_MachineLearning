@@ -2,8 +2,12 @@
 ---
 
 <p align="center">
-<i>Learn First Do Next</i>
+<b><i>Learn First Do Next</i></b>
 </p>
+
+---
+
+
 
 Here I have organized most of the basics in chapter wise. I hope it will help you to explore fast. 
 
