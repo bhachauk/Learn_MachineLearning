@@ -1,4 +1,5 @@
 ### Data Mining
+---
 
 > Converting Data Into Interesting Informations
 
@@ -6,6 +7,35 @@
 (M. J. A. Berry and G. S. Linoff)"
 
 > *“Data mining is finding interesting structure (patterns, statistical models, relationships) in databases.”* (U. Fayyad, S. Chaudhuri and P. Bradley)
+
+
+#### How it related ?
+---
+
+<p align="center">
+<i>Relation Between The Terminologies</i>
+</p>
+<p align="center">
+<kbd>
+<img src="/data/img/data-science.jpg" width="500" height="500"/></kbd> 
+</p>
+
+Img Source : [data-science-central](https://www.datasciencecentral.com/profiles/blogs/difference-of-data-science-machine-learning-and-data-mining)
+
+
+#### some Relational Difference Between DM - ML
+---
+
+<p align="center">
+<i>Diff Between Data Mining and Machine Learning</i>
+</p>
+<p align="center">
+<kbd>
+<img src="/data/img/dm-vs-ml.jpg" width="500" height="500"/></kbd> 
+</p>
+
+
+Img Source : [educba](https://www.educba.com/data-mining-vs-machine-learning/)
 
 #### Awesome Posts
 
