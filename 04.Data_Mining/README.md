@@ -31,7 +31,7 @@ Img Source : [data-science-central](https://www.datasciencecentral.com/profiles/
 </p>
 <p align="center">
 <kbd>
-<img src="/data/img/dm-vs-ml.jpg" width="800" height="1500"/></kbd> 
+<img src="/data/img/dm-vs-ml.jpg" width="800" height="2000"/></kbd> 
 </p>
 
 
