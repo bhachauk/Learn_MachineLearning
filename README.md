@@ -158,6 +158,17 @@ Ref : [Microsoft cheat sheet](https://docs.microsoft.com/en-us/azure/machine-lea
 ![Chart](/data/img/ms-cheat.png)
 
 
+### References :
+---
+
+- [Coursera - Andrew NG](https://www.coursera.org/learn/machine-learning)
+- [Lecture_notes- Supervised Learning](http://cs229.stanford.edu/notes/cs229-notes1.pdf)
+- [ML Cheat sheet](https://ml-cheatsheet.readthedocs.io/en/latest/linear_regression.html#)
+- [Digit Recognize](http://neuralnetworksanddeeplearning.com/chap1.html)
+- [Own Notes](https://github.com/Bhanuchander210/Learn_MachineLearning)
+
+
+
 ### Others
 ---
 

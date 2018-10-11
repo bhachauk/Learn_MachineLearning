@@ -182,6 +182,7 @@ Sources
 - [https://www.kaggle.com/benhamner/python-data-visualizations](https://www.kaggle.com/benhamner/python-data-visualizations)
 
 ### Data Visualization
+---
 
 - [IRIS Data](/01.Introduction/datavisualization/iris-visualization.ipynb)
 - [TITANIC Data](/01.Introduction/datavisualization/Nominal_Visualization_Titanic.ipynb)

@@ -38,6 +38,7 @@ Img Source : [data-science-central](https://www.datasciencecentral.com/profiles/
 Img Source : [educba](https://www.educba.com/data-mining-vs-machine-learning/)
 
 #### Awesome Posts
+---
 
 - [http://tdan.com/data-mining-and-statistics-what-is-the-connection/5226#](http://tdan.com/data-mining-and-statistics-what-is-the-connection/5226#)
 - [https://www.linkedin.com/pulse/3-styles-data-mining-abhishek-mittal/](https://www.linkedin.com/pulse/3-styles-data-mining-abhishek-mittal/)
@@ -63,6 +64,7 @@ Img Source : [educba](https://www.educba.com/data-mining-vs-machine-learning/)
 - [chi 2 on multiple categorical values](https://stackoverflow.com/questions/48035381/correlation-among-multiple-categorical-variables-pandas)
 
 #### Association Rule Mining
+---
 
 *Apriori Algorithm*
 
@@ -79,6 +81,7 @@ Img Source : [educba](https://www.educba.com/data-mining-vs-machine-learning/)
 - [Example 2](http://statisticsbyjim.com/hypothesis-testing/chi-square-test-independence-example/)
 
 #### Feature Learning
+---
  
 - [Feature Learning With Chi 2](https://www.linkedin.com/pulse/chi-square-feature-selection-python-md-badiuzzaman-biplob/)
 
