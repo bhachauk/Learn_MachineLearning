@@ -9,6 +9,13 @@
 > *“Data mining is finding interesting structure (patterns, statistical models, relationships) in databases.”* (U. Fayyad, S. Chaudhuri and P. Bradley)
 
 
+Data mining is Multi-disciplinary.
+
+- Data Processing / Manipulation
+- Visualization
+- Machine Learning and AI
+
+
 #### How it related ?
 ---
 
@@ -23,7 +30,7 @@
 Img Source : [data-science-central](https://www.datasciencecentral.com/profiles/blogs/difference-of-data-science-machine-learning-and-data-mining)
 
 
-#### some Relational Difference Between DM - ML
+#### Some Relational Difference Between DM - ML
 ---
 
 <p align="center">
@@ -37,7 +44,41 @@ Img Source : [data-science-central](https://www.datasciencecentral.com/profiles/
 
 Img Source : [educba](https://www.educba.com/data-mining-vs-machine-learning/)
 
-#### Inputs:
+
+### Goal
+---
+
+*Turning Data into Interesting Information*
+
+##### Techniques:
+---
+
+- Classification 
+
+Examining the feature of a newly presented object and assigning it to one of a predefined set of classes;
+
+- Estimation 
+
+Given some input data, coming up with a value for some unknown continuous variable such as income, height, or credit-card balance;
+
+- Prediction 
+
+The same as classification and estimation except that the records are classified according to some predicted future behaviour or estimated future value;
+
+- Affinity Grouping or Association Rules 
+
+Determine which things go together, also known as dependency modelling, E.g. In a shopping cart at the supermarket – market basket analysis;
+
+- Clustering 
+
+Segmenting a population into a number of subgroups or clusters and Description and visualization exploratory or visual data mining.
+
+- Feature Analysis
+
+Analysing the input feature strength.
+
+
+#### Input Data Types:
 ---
  
 *Larger Amount Of Dataset*

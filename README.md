@@ -55,6 +55,7 @@ Ex :
 - Given a patient with a tumor, we have to predict whether the tumor is malignant or benign.
 - Digit Recognition which produces output [0 - 9].
 
+
 #### Regression
 ---
 
