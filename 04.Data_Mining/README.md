@@ -37,6 +37,65 @@ Img Source : [data-science-central](https://www.datasciencecentral.com/profiles/
 
 Img Source : [educba](https://www.educba.com/data-mining-vs-machine-learning/)
 
+#### Inputs:
+---
+ 
+*Larger Amount Of Dataset*
+
+- Continuous
+- Nominal / Categorical
+
+###### Continuous Data:
+---
+
+Ex : Stock Rate, Marks, etc… 
+
+- Pearson Correlation.
+- Spearman rank correlation.
+- Kendall correlation.
+
+###### Categorical Data:
+---
+
+Ex: Gender, Class, Complexion, Blood Group, etc.. 
+
+- Apriori Algorithm, FP Growth Algorithm.
+- Chi Square. (For Prediction and Feature Learning)(Type of Correlation)
+
+---
+
+
+## How to get Interesting statistics from a Data ?
+---
+
+- Feature Analysis
+- Association Rule Mining
+
+---
+
+#### Feature Analysis 
+
+Analysing and evaluating which feature is important for predicting the target. 
+Also used in Dimensionality Reduction. It Means It focuses On One Parameter to evaluate its Strength on Controlling Target.
+
+Example : India Won All (100 %) Matches with Rohit Sharma’s Captaincy (It is not real ... :P )  
+
+Data Set:
+	
+|Is Rohit the Captain?|Win?|
+|---------------------|----|
+|True|True|
+|False|False|
+|True|True|
+|True|True|
+
+> Here It is More predictable in first sight.. But What we do if we have **N** numbers of attributes...
+
+Example Feature Analysis On :
+
+- [IRIS Flower Data Set](/04.Data_Mining/Feature-Learning/feature_importance.ipynb)
+- [Titanic Data Set](/04.Data_Mining/Feature-Learning/Chi2_Test_Featue_Importance_For_Titanic_Data.ipynb)
+
 #### Awesome Posts
 ---
 
