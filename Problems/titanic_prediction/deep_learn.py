@@ -6,46 +6,73 @@ from sklearn import model_selection
 from keras.models import Sequential
 from keras.layers import Dense
 import matplotlib.pyplot as plt
+import sys
+sys.setrecursionlimit(20000)
 
+import warnings
+
+warnings.filterwarnings('ignore')
 
 train = pd.read_csv('/home/bhanuchander/course/Learn_MachineLearning/data/csv/titanic/train.csv')
 
-train = train.set_index('PassengerId')
 
-print train.shape
+def getFormat (train):
 
-print train.Survived.value_counts(normalize=True)
 
-train['Name_len']=train.Name.str.len()
 
-train['Ticket_First']=train.Ticket.str[0]
+    train['Ticket'].fillna(0, inplace=True)
 
-train['FamilyCount']=train.SibSp+train.Parch
+    # train['isSpecial'] = train.Name.str.contains('(', regex=False)
 
-train['Cabin_First']=train.Cabin.str[0]
+    train['Ticket_Type']=train.Ticket.apply(lambda x : x.isalnum())
 
-train['title'] = train.Name.str.extract('\, ([A-Z][^ ]*\.)',expand=False)
+    train['Ticket']= train.Ticket.str.extract('(\d+)')
 
-train.Fare.fillna(train.Fare.mean(),inplace=True)
+    train['title'] = train.Name.str.extract('\, ([A-Z][^ ]*\.)',expand=False)
 
-trainML = train[['Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket',
-       'Fare', 'Embarked', 'Name_len', 'Ticket_First', 'FamilyCount',
-       'title']]
+    train.Fare.fillna(0, inplace=True)
 
-nominal_cols = ['Embarked', 'Sex', 'Parch', 'Ticket_First', 'title']
+    train.Age.fillna(0, inplace=True)
 
-trainML[nominal_cols] = trainML[nominal_cols].astype('category')
+    train['Cabin_First'] = train.Cabin.str[0]
 
-cat_columns = trainML.select_dtypes(['category']).columns
+    train['Cabin_Number'] = train.Cabin.str.replace('[^0-9]', '')
 
-trainML[cat_columns] = trainML[cat_columns].apply(lambda x: x.cat.codes)
+    train['Cabin'].fillna('UNKNOWN-CABIN', inplace=True)
 
-trainML.fillna(0, inplace=True)
+    train['Cabin'] = train.Cabin.str.replace('[^a-zA-Z]', '')
 
-X=trainML[['Age', 'SibSp', 'Parch',
-       'Fare', 'Sex', 'Pclass','title', 'Name_len','Embarked', 'FamilyCount']] # Taking all the numerical values
+    train['Cabin_Unique'] = train['Cabin'].apply( lambda x : len(set((str(x)))))
 
-Y = trainML['Survived'].values
+    train['Cabins'] = train['Cabin'].apply( lambda x : ''.join(set((str(x)))))
+
+    train['Cabin'] = train['Cabin'].apply (lambda x : len(str(x)))
+
+    trainML = train[['Pclass', 'Sex', 'SibSp', 'Parch','PassengerId',
+                     'Fare', 'Embarked', 'Ticket_Type', 'title',
+                     'Cabin', 'Cabin_First', 'Cabin_Unique', 'Ticket',
+                     'Cabins', 'Cabin_Number']]
+
+    trainML.fillna('Unknown', inplace=True)
+
+    nominal_cols = ['Sex','SibSp', 'Pclass', 'title', 'Embarked', 'Cabin_First', 'Cabins']
+
+    # X = pd.get_dummies(trainML[nominal_cols])
+
+    X = pd.DataFrame()
+
+    trainML[nominal_cols] = trainML[nominal_cols].astype('category')
+
+    cat_columns = trainML.select_dtypes(['category']).columns
+
+    X[cat_columns] = trainML[cat_columns].apply(lambda x: x.cat.codes)
+
+    return X
+
+
+X = getFormat(train=train)
+
+Y = train['Survived']
 
 X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.2, random_state=9)
 
@@ -67,7 +94,7 @@ for op in opt:
   model.compile(loss='binary_crossentropy', optimizer=op, metrics=['accuracy'])
 
 
-  history = model.fit(X_train, Y_train, validation_data=(X_validation, Y_validation), nb_epoch=200, batch_size= trainML.shape[0]/100, verbose=0)
+  history = model.fit(X_train, Y_train, validation_data=(X_validation, Y_validation), nb_epoch=200, batch_size= train.shape[0]/100, verbose=0)
 
   plt.plot(history.history['acc'])
   plt.plot(history.history['val_acc'])

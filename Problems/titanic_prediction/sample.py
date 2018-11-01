@@ -1,47 +1,72 @@
 import pandas as pd
 import numpy as np
-import matplotlib.pyplot as plt
-import seaborn as sns
-from IPython.display import Image, display
+import sys
+sys.setrecursionlimit(20000)
 
 import warnings
 
 warnings.filterwarnings('ignore')
 
-
 train = pd.read_csv('/home/bhanuchander/course/Learn_MachineLearning/data/csv/titanic/train.csv')
 
-train = train.set_index('PassengerId')
 
-print train.shape
+def getFormat (train):
 
-print train.Survived.value_counts(normalize=True)
 
-train['Name_len']=train.Name.str.len()
 
-train['Ticket_First']=train.Ticket.str[0]
+    train['Ticket'].fillna(0, inplace=True)
 
-train['FamilyCount']=train.SibSp+train.Parch
+    # train['isSpecial'] = train.Name.str.contains('(', regex=False)
 
-train['Cabin_First']=train.Cabin.str[0]
+    train['Ticket_Type']=train.Ticket.apply(lambda x : x.isalnum())
 
-train['title'] = train.Name.str.extract('\, ([A-Z][^ ]*\.)',expand=False)
+    train['Ticket']= train.Ticket.str.extract('(\d+)')
 
-train.Fare.fillna(train.Fare.mean(),inplace=True)
+    train['title'] = train.Name.str.extract('\, ([A-Z][^ ]*\.)',expand=False)
 
-trainML = train[['Survived', 'Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket',
-       'Fare', 'Embarked', 'Name_len', 'Ticket_First', 'FamilyCount',
-       'title']]
+    train.Fare.fillna(0, inplace=True)
 
-nominal_cols = ['Embarked', 'Sex', 'Parch', 'Ticket_First', 'title']
+    train.Age.fillna(0, inplace=True)
 
-trainML[nominal_cols] = trainML[nominal_cols].astype('category')
+    train['Cabin_First'] = train.Cabin.str[0]
 
-cat_columns = trainML.select_dtypes(['category']).columns
+    train['Cabin_Number'] = train.Cabin.str.replace('[^0-9]', '')
 
-trainML[cat_columns] = trainML[cat_columns].apply(lambda x: x.cat.codes)
+    train['Cabin'].fillna('UNKNOWN-CABIN', inplace=True)
 
-trainML.fillna(0, inplace=True)
+    train['Cabin'] = train.Cabin.str.replace('[^a-zA-Z]', '')
+
+    train['Cabin_Unique'] = train['Cabin'].apply( lambda x : len(set((str(x)))))
+
+    train['Cabins'] = train['Cabin'].apply( lambda x : ''.join(set((str(x)))))
+
+    train['Cabin'] = train['Cabin'].apply (lambda x : len(str(x)))
+
+    trainML = train[['Pclass', 'Sex', 'SibSp', 'Parch','PassengerId',
+                     'Fare', 'Embarked', 'Ticket_Type', 'title',
+                     'Cabin', 'Cabin_First', 'Cabin_Unique', 'Ticket',
+                     'Cabins', 'Cabin_Number']]
+
+    trainML.fillna('Unknown', inplace=True)
+
+    nominal_cols = ['Sex','SibSp', 'Pclass', 'title', 'Embarked', 'Cabin_First', 'Cabins']
+
+    # X = pd.get_dummies(trainML[nominal_cols])
+
+    X = pd.DataFrame()
+
+    trainML[nominal_cols] = trainML[nominal_cols].astype('category')
+
+    cat_columns = trainML.select_dtypes(['category']).columns
+
+    X[cat_columns] = trainML[cat_columns].apply(lambda x: x.cat.codes)
+
+    return X
+
+
+X = getFormat(train=train)
+
+Y = train['Survived']
 
 from sklearn.metrics import accuracy_score
 from sklearn.linear_model import LogisticRegression
@@ -52,7 +77,9 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn import model_selection
 from sklearn.naive_bayes import GaussianNB
 from sklearn.svm import SVC
+from sklearn.ensemble import VotingClassifier
 
+X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.25, random_state = 5)
 
 models = []
 models.append(('LR', LogisticRegression()))
@@ -63,65 +90,28 @@ models.append(('NB', GaussianNB()))
 models.append(('SVM', SVC()))
 models.append(('RF', RandomForestClassifier()))
 
-print trainML.shape
-
-X=trainML[['Age', 'SibSp', 'Parch',
-       'Fare', 'Sex', 'Pclass','title', 'Name_len','Embarked', 'FamilyCount']] # Taking all the numerical values
-
-Y = trainML['Survived'].values
-
-X_train, X_validation, Y_train, Y_validation = model_selection.train_test_split(X, Y, test_size=0.2, random_state=9)
-
+vc = VotingClassifier(estimators = models, voting='soft', weights=[2, 1, 2, 1, 2, 1, 2, 1])
+models.append(('Voting', vc))
 for n, model in models:
     model.fit(X_train, Y_train)
     # Make a prediction
     y_predict = model.predict(X_validation)
     print " Model : ", n," Accuracy : ", (accuracy_score(Y_validation, y_predict))
 
-
-
+# Generating Output :
 
 train = pd.read_csv('/home/bhanuchander/course/Learn_MachineLearning/data/csv/titanic/test.csv')
-train = train.set_index('PassengerId')
 
-train['Name_len']=train.Name.str.len()
+X_test = getFormat(train)
 
-train['Ticket_First']=train.Ticket.str[0]
+prime = list(X)
 
-train['FamilyCount']=train.SibSp+train.Parch
-
-train['Cabin_First']=train.Cabin.str[0]
-
-train['title'] = train.Name.str.extract('\, ([A-Z][^ ]*\.)',expand=False)
-
-train.Fare.fillna(train.Fare.mean(),inplace=True)
-
-trainML = train[['Pclass', 'Name', 'Sex', 'Age', 'SibSp', 'Parch', 'Ticket',
-       'Fare', 'Embarked', 'Name_len', 'Ticket_First', 'FamilyCount',
-       'title']]
-
-nominal_cols = ['Embarked', 'Sex', 'Parch', 'Ticket_First', 'title']
-
-trainML[nominal_cols] = trainML[nominal_cols].astype('category')
-
-cat_columns = trainML.select_dtypes(['category']).columns
-
-trainML[cat_columns] = trainML[cat_columns].apply(lambda x: x.cat.codes)
-
-trainML.fillna(0, inplace=True)
-
-X_test=trainML[['Age', 'SibSp', 'Parch',
-       'Fare', 'Sex', 'Pclass','title', 'Name_len','Embarked', 'FamilyCount']] # Taking all the numerical values
-
-
-rf = RandomForestClassifier()
+rf = RandomForestClassifier(n_estimators=100)
 
 rf.fit(X, Y)
 
-y_test = rf.predict(X_test)
+y_predict = rf.predict(X_test)
 
-trainML['Survived']=y_test
+train['Survived'] = y_predict
 
-
-
-trainML.to_csv('out.csv')
+train[['Survived','PassengerId']].to_csv('out.csv', index=False)
