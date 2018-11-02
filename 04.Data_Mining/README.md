@@ -175,6 +175,10 @@ Example Feature Analysis On :
 - [Efficient - Apriori - Python 3.6](https://pypi.org/project/efficient-apriori/)
 - [Example 5 With Plots](http://intelligentonlinetools.com/blog/tag/apriori-algorithm-in-data-mining/)
 
+*FP Growth*
+
+- [FP Growth](https://pypi.org/project/pyfpgrowth/)
+
 *Chi2*
 
 - [Example 1](https://www.spss-tutorials.com/chi-square-independence-test/)
