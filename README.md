@@ -159,6 +159,12 @@ Ref : [Microsoft cheat sheet](https://docs.microsoft.com/en-us/azure/machine-lea
 ![Chart](/data/img/ms-cheat.png)
 
 
+Useful post
+Ref : [Linked In Post](https://www.linkedin.com/feed/update/activity:6474596830125576192/)
+
+![overviewPost](/data/img/view_on_ml.jpeg)
+
+
 ### Awesome-posts :
 ---
 
