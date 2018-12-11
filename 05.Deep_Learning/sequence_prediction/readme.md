@@ -20,3 +20,4 @@
 ---
 
 - LSTM works better on 200-400 time steps. [Ref - Machine Learning Mastery](https://machinelearningmastery.com/prepare-univariate-time-series-data-long-short-term-memory-networks/)
+- Time Series Modeling predicting next N time stamps [Modeling Link](https://www.analyticsvidhya.com/blog/2015/12/complete-tutorial-time-series-modeling/)
