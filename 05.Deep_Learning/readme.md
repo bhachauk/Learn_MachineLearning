@@ -1,6 +1,9 @@
 ## Deep Learning
 ---
 
+#### Model save and load strategies:
+---
+
 **How to Save a Model ?**
 ---
 
@@ -32,3 +35,10 @@
     ```python
     
     ```    
+    
+#### Conclusion
+---
+
+Using **Method 1** is having some optimized process than **method 2** and also suggested. 
+
+- [Stack overflow Disc](https://stackoverflow.com/questions/42621864/difference-between-keras-model-save-and-model-save-weights)

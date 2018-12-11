@@ -14,3 +14,9 @@
 - https://machinelearningmastery.com/how-does-attention-work-in-encoder-decoder-recurrent-neural-networks/
 - http://chandlerzuo.github.io/blog/2017/11/darnn
 - https://github.com/YitongCU/Duel-staged-Attention-for-NYC-Weather-prediction
+
+
+###### Hints:
+---
+
+- LSTM works better on 200-400 time steps. [Ref - Machine Learning Mastery](https://machinelearningmastery.com/prepare-univariate-time-series-data-long-short-term-memory-networks/)
