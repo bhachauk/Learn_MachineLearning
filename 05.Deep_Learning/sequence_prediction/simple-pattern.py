@@ -13,27 +13,24 @@ def get_train():
     X = X.reshape((len(X), 2, 1))
     return X, y
 
-# # define model
-# model = Sequential()
-# model.add(LSTM(10, input_shape=(2, 1)))
-# model.add(Dense(1, activation='linear'))
-# # compile model
-# model.compile(loss='mse', optimizer='adam')
-
-
+# define model
+model = Sequential()
+model.add(LSTM(2, input_shape=(2, 1)))
+model.add(Dense(1, activation='linear'))
+# compile model
+model.compile(loss='mse', optimizer='adam')
 
 X, y = get_train()
 
 print X
 print y
 
-
-# model.fit(X, y, epochs=300, shuffle=False, verbose=0)
+model.fit(X, y, epochs=300, shuffle=False, verbose=0)
 # # save model to single file
 # model.save('lstm_model.h5')
 
 # load model from single file
-model = load_model('lstm_model.h5')
+# model = load_model('lstm_model.h5')
 # make predictions
 
 yhat = model.predict(X, verbose=0)

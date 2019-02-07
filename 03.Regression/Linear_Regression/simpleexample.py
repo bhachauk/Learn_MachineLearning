@@ -57,4 +57,3 @@ for name, model in models:
     print 'Model Name : ',name, '   accuracy : ', model.score(X_validation, Y_validation)
 
     print cv_results.mean()
-

@@ -21,7 +21,7 @@ import seaborn as sns
 
 
 # Load dataset
-url = "../data/csv/iris.csv"
+url = "/home/bhanuchander/course/Learn_MachineLearning/data/csv/iris.csv"
 names = ['sepal-length', 'sepal-width', 'petal-length', 'petal-width', 'class']
 dataset = pandas.read_csv(url, names=names)
 
@@ -30,7 +30,7 @@ print dataset.describe()
 print dataset.groupby('class').size()
 
 
-scatter_matrix(dataset, c= ['r','g','b'])
+scatter_matrix(dataset, c=['r', 'g', 'b'])
 plt.show()
 
 
@@ -78,12 +78,13 @@ for name, model in models:
 	predicted = model_selection.cross_val_predict(model, X_train, Y_train)
 	cm= confusion_matrix(Y_train, predicted)
 	ax = plt.subplot()
-	sns.heatmap(cm, annot=True, ax=ax);  # annot=True to annotate cells
+	sns.heatmap(cm, annot=True, ax=ax)
+	#annot=True to annotate cells
 
 	# labels, title and ticks
-	ax.set_xlabel('Predicted labels');
-	ax.set_ylabel('True labels');
-	ax.set_title('Confusion Matrix');
+	ax.set_xlabel('Predicted labels')
+	ax.set_ylabel('True labels')
+	ax.set_title('Confusion Matrix')
 	plt.show()
 
 	results.append(cv_results)
