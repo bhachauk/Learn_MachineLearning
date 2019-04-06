@@ -14,10 +14,10 @@ for cor in ['pearson', 'kendall', 'spearman']:
 
     print correlations.head()
     # plot correlation matrix
-    # fig = plt.figure()
-    # ax = fig.add_subplot(111)
-    # cax = ax.matshow(correlations)
-    # fig.colorbar(cax, cmap='RdBu')
-    # ax.set_xticklabels(names)
-    # ax.set_yticklabels(names)
-    # plt.show()
+    fig = plt.figure()
+    ax = fig.add_subplot(111)
+    cax = ax.matshow(correlations)
+    fig.colorbar(cax, cmap='RdBu')
+    ax.set_xticklabels(names)
+    ax.set_yticklabels(names)
+    plt.show()
