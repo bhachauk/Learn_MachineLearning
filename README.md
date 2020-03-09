@@ -5,18 +5,6 @@
 <b><i>Learn First Do Next</i></b>
 </p>
 
----
-
-
-
-Here I have organized most of the basics in chapter wise. I hope it will help you to explore fast. 
-
-- [01. Introduction](01.Introduction/readme.md)
-- [02. Classification](02.Classification/README.md)
-- [03. Regression](03.Regression/readme.md)
-- [04. DataMining](04.Data_Mining/README.md)
-
-
 # Machine Learning - A Quick Note
 ---
 
@@ -29,6 +17,8 @@ Types:
 - [Supervised](#supervised-learning)
 - [Unsupervised](#unsupervised-learning)
 - [Reinforcement](#-reinforcement-learning)
+
+![simple view](data/img/simple_intro.jpeg)
 
 ---
 
@@ -184,3 +174,16 @@ Ref : [Linked In Post](https://www.linkedin.com/feed/update/activity:64745968301
 - Sequence to Sequence Prediction.
 
 [Source](https://machinelearningmastery.com/sequence-prediction)
+
+
+
+
+
+Here I have organized most of the basics in chapter wise. I hope it will help you to explore fast. 
+
+- [01. Introduction](01.Introduction/readme.md)
+- [02. Classification](02.Classification/README.md)
+- [03. Regression](03.Regression/readme.md)
+- [04. DataMining](04.Data_Mining/README.md)
+- [05. DeepLearning](05.Deep_Learning)
+- [06. Reinforcement Learning](06.Reinforcement_Learning/readme.md)
