@@ -1,6 +1,8 @@
 import pandas as pd
 import keras
 import tensorflow as tf
+from matplotlib import pyplot as plt
+
 
 df = pd.read_csv('/media/bhanuchanderu/nova/nyc_taxi.csv')
 df['pickup_datetime'] = pd.to_datetime(df['pickup_datetime']).dt.weekday
@@ -48,7 +50,21 @@ class myCallback (tf.keras.callbacks.Callback):
 for name, model in models:
     opt = keras.optimizers.Adam(learning_rate=0.01)
     model.compile(optimizer=opt, loss='mean_squared_error')
-    my_callback = myCallback()
     print('--------------------------')
     print('Model : ', name)
-    model.fit(train_data, target_data, epochs=100, callbacks=[my_callback], verbose=0)
+    history = model.fit(train_data, target_data, epochs=100, verbose=0, validation_split=0.1)
+    # plt.plot(history.history['accuracy'])
+    # plt.plot(history.history['val_accuracy'])
+    # plt.title('model accuracy')
+    # plt.ylabel('accuracy')
+    # plt.xlabel('epoch')
+    # plt.legend(['train', 'val'], loc='upper left')
+    # plt.show()
+
+    plt.plot(history.history['loss'])
+    plt.plot(history.history['val_loss'])
+    plt.title('model loss')
+    plt.ylabel('loss')
+    plt.xlabel('epoch')
+    plt.legend(['train', 'val'], loc='upper left')
+    plt.show()
