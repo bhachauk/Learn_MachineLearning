@@ -67,4 +67,5 @@ for name, model in models:
     plt.ylabel('loss')
     plt.xlabel('epoch')
     plt.legend(['train', 'val'], loc='upper left')
+    plt.title(name)
     plt.show()
